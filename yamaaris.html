@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+	  <!--background-color: rgb(230, 237, 253);-->
+  }
+  #swapImage {
+    width: "600";
+	  <!--transition: opacity 0.5 ease-->
+  }
+ .mainDiv {
+    width: 800px;
+    margin: 0 auto; /* horizontally centers */
+    text-align: center;  
+}
+</style>
+
+</head>
+<body>
+<div class=mainDiv>
+  <h1 style="color: rgb(7, 28, 51);">Under construction!</h1>
+  <img id="swapImage" src="haarisHit.png" width="600">
+   <script>
+      const image = document.getElementById('swapImage');
+      const images = ['haarisHit.png', 'yamHit.png'];
+      let index = 0;
+  
+      setInterval(() => {
+        index = (index + 1) % images.length;
+        image.src = images[index];
+      }, 1000); // swaps every 1 seconds
+   </script>
+</div>
+</body>
+</html>
